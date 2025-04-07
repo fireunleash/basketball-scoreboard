@@ -40,8 +40,31 @@ function resetScore(){
     currentHomeScore.textContent = homeScore    
     guestScore = 0 
     currentGuestScore.textContent = guestScore  
-    console.log("Resetting Home and Guest Scores to "+ homeScore+" and "+guestScore)
+    console.log("Resetting Home and Guest Scores to 0")
 }
+
+//Stretch goals
+let homeWinning = document.getElementById('home-scoreboard');
+let guestWinning = document.getElementById('guest-scoreboard');
+
+setInterval(function() {
+
+if (homeScore == guestScore) {
+    homeWinning.classList.remove('highlight');
+    guestWinning.classList.remove('highlight');
+}
+
+    if (homeScore > guestScore){
+        homeWinning.classList.add('highlight');
+        guestWinning.classList.remove('highlight');
+    }
+    else{  
+        guestWinning.classList.add('highlight');
+        homeWinning.classList.remove('highlight');
+    }
+}, 100);
+    
+
 
 
 

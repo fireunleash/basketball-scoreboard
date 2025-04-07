@@ -44,3 +44,7 @@ body {
     height: 25px;
     margin-top: 200px;
 }
+
+.highlight{
+    border: 3px solid #FCD34D;
+}
