@@ -49,23 +49,17 @@ let guestWinning = document.getElementById('guest-scoreboard');
 
 setInterval(function() {
 
-if (homeScore == guestScore) {
-    homeWinning.classList.remove('highlight');
-    guestWinning.classList.remove('highlight');
-}
+if (homeScore == guestScore){
+        homeWinning.classList.remove('highlight');
+        guestWinning.classList.remove('highlight');
+    }
 
     if (homeScore > guestScore){
         homeWinning.classList.add('highlight');
         guestWinning.classList.remove('highlight');
     }
-    else{  
+    else if (homeScore < guestScore){  
         guestWinning.classList.add('highlight');
         homeWinning.classList.remove('highlight');
     }
 }, 100);
-    
-
-
-
-
-
