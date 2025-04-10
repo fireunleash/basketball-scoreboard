@@ -1,9 +1,9 @@
 let homeScore = 0
 let guestScore = 0
 let currentHomeScore = document.getElementById("home-score")
-let currentGuestScore = document.getElementById("guest-score")
+let currentAwayScore = document.getElementById("away-score")
 currentHomeScore.textContent = homeScore
-currentGuestScore.textContent = guestScore
+currentAwayScore.textContent = awayScore
 
 function homePlusOne(){
     homeScore ++
@@ -20,46 +20,46 @@ function homePlusThree(){
     currentHomeScore.textContent = homeScore
 }
 
-function guestPlusOne(){
-    guestScore ++
-    currentGuestScore.textContent = guestScore
+function awayPlusOne(){
+    awayScore ++
+    currentAwayScore.textContent = awayScore
 }
 
-function guestPlusTwo(){
-    guestScore += 2
-    currentGuestScore.textContent = guestScore
+function awayPlusTwo(){
+    awayScore += 2
+    currentAwayScore.textContent = awayScore
 }
 
-function guestPlusThree(){
-    guestScore +=3
-    currentGuestScore.textContent = guestScore
+function awayPlusThree(){
+    awayScore +=3
+    currentAwayScore.textContent = awayScore
 }
 
 function resetScore(){
     homeScore = 0 
     currentHomeScore.textContent = homeScore    
-    guestScore = 0 
-    currentGuestScore.textContent = guestScore  
-    console.log("Resetting Home and Guest Scores to 0")
+    awayScore = 0 
+    currentAwayScore.textContent = awayScore  
+    console.log("Resetting Home and Away Scores to 0")
 }
 
 //Stretch goals
 let homeWinning = document.getElementById('home-scoreboard');
-let guestWinning = document.getElementById('guest-scoreboard');
+let awayWinning = document.getElementById('away-scoreboard');
 
 setInterval(function() {
 
-if (homeScore == guestScore){
+if (homeScore == awayScore){
         homeWinning.classList.remove('highlight');
-        guestWinning.classList.remove('highlight');
+        awayWinning.classList.remove('highlight');
     }
 
-    if (homeScore > guestScore){
+    if (homeScore > awayScore){
         homeWinning.classList.add('highlight');
-        guestWinning.classList.remove('highlight');
+        awayWinning.classList.remove('highlight');
     }
-    else if (homeScore < guestScore){  
+    else if (homeScore < awayScore){  
         guestWinning.classList.add('highlight');
-        homeWinning.classList.remove('highlight');
+        awayWinning.classList.remove('highlight');
     }
 }, 100);
