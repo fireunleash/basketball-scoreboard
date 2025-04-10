@@ -1,5 +1,5 @@
 let homeScore = 0
-let guestScore = 0
+let awayScore = 0
 let currentHomeScore = document.getElementById("home-score")
 let currentAwayScore = document.getElementById("away-score")
 currentHomeScore.textContent = homeScore
@@ -59,7 +59,7 @@ if (homeScore == awayScore){
         awayWinning.classList.remove('highlight');
     }
     else if (homeScore < awayScore){  
-        guestWinning.classList.add('highlight');
-        awayWinning.classList.remove('highlight');
+        awayWinning.classList.add('highlight');
+        homeWinning.classList.remove('highlight');
     }
 }, 100);
